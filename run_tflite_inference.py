@@ -7,7 +7,7 @@ with open('label.txt', 'r') as f:
     labels = [line.strip() for line in f.readlines()]
 
 # TFLiteモデルの読み込み
-interpreter = tflite.Interpreter(model_path='model.tflite')
+interpreter = tflite.Interpreter(model_path='model_compat.tflite')
 interpreter.allocate_tensors()
 
 input_details = interpreter.get_input_details()
