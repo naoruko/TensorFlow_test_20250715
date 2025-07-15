@@ -3,7 +3,7 @@ import numpy as np
 import tflite_runtime.interpreter as tflite
 
 # モデルとラベルファイルの読み込み
-interpreter = tflite.Interpreter(model_path="model_transfer_learning.tflite")
+interpreter = tflite.Interpreter(model_path="model_float16.tflite")
 interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
